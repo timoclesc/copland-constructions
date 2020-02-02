@@ -359,15 +359,45 @@ header {
     height: 300px;
     flex: 1 1 300px;
     overflow: hidden;
+    position: relative;
 }
 
 .project-preview-img {
     height: 100%;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
     transition: all .5s;
-    display: grid;
-    padding: 10%;
+}
+
+.prj-prev-prnt:hover .project-preview-img {
+    transform: scale(1.1);
+    background-position: bottom;
+    background-color: #a7a7a7;
+    background-blend-mode: multiply;
+}
+
+.prj-prev-prnt:hover p {
+    display: block;
+}
+
+.project-text {
+    padding: 1rem;
+    background-color: #7a7a7a;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-text p {
+    font-weight: 400;
+    color: white;
+    display: none;
+}
+
+.project-text h3 {
+    color: white;
+    margin-bottom: 0;
 }
 
 .wickam-st-img {
@@ -405,55 +435,6 @@ header {
     background-image: url(images/290617_Hendrick_Cut-Throught_Colour-Review.jpg);
     background-position: bottom;
     background-size: cover;
-}
-
-.prj-prev-prnt:hover .project-preview-img {
-    transform: scale(1.1);
-    background-position: bottom;
-    background-color: #a7a7a7;
-    background-blend-mode: multiply;
-}
-
-
-/* .prj-prev-prnt:hover .project-text {
-    animation-name: preview-grow;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-} */
-
-.prj-prev-prnt:hover p {
-    display: block;
-}
-
-.project-text {
-    padding: 1rem;
-    background-color: #7a7a7a;
-    opacity: 0.9;
-    align-self: flex-start;
-    /* max-width: 70% */
-}
-
-
-/* @keyframes preview-grow {
-    from {
-        margin-top: 0rem;
-        margin-left: 0rem;
-    }
-    to {
-        margin-top: 10%;
-        margin-left: 10%;
-    }
-} */
-
-.project-text p {
-    font-weight: 400;
-    color: white;
-    display: none;
-}
-
-.project-text h3 {
-    color: white;
-    margin-bottom: 0;
 }
 
 
