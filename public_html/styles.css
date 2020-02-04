@@ -144,6 +144,13 @@ header {
     }
 }
 
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+}
+
 
 /* --------------
 ----navigation --
@@ -257,7 +264,6 @@ header {
 
 .main-image {
     width: 100%;
-    max-width: 350px;
     object-fit: cover;
     box-shadow: 5px 5px 0 var(--dark-accent), -5px -5px 0 var(--main-color);
     margin: 0 auto 2em;
@@ -265,14 +271,7 @@ header {
 
 .about-image {
     order: 2;
-}
-
-.template-head {
-    order: -1;
-}
-
-.template-page-header {
-    /* margin-top: 2em; */
+    width: 100%;
 }
 
 .template-text:last-of-type {
@@ -283,20 +282,13 @@ header {
     .template-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "img title title" "img content content";
         column-gap: 2em;
     }
-    .main-image {
-        width: 100%;
-        height: 100%;
-        grid-area: img;
-    }
-    .template-head {
-        grid-area: title;
-    }
+
     .template-content {
-        grid-area: content;
+        grid-column: 2 / -1;
     }
+ 
 }
 
 
@@ -325,7 +317,14 @@ header {
 .icon-cont {
     text-align: center;
     align-self: center;
+    position: relative;
 }
+
+.icon-cont:nth-of-type(2){
+    grid-column: -2 / -1;
+    grid-row: 2;
+}
+
 
 @media (max-width: 600px) {
     .service-grid {
@@ -338,22 +337,36 @@ header {
 }
 
 
+
+@media (max-width: 400px) {
+ 
+    .service-grid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: dense;
+    }
+
+    .service-grid .icon-cont::after {
+        content: "";
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        background-color: var(--light-accent);
+    }
+    
+}
+
+
 /* ===========================
 =   Project preview / hero    =
 ==============================*/
 
 .hero-section {
     overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
 }
-
-.hero-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    object-position: bottom;
-}
-
-.project-preview {}
 
 .prj-prev-prnt {
     height: 300px;
@@ -361,9 +374,15 @@ header {
     overflow: hidden;
     position: relative;
 }
+.hero-image {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
 
 .project-preview-img {
-    height: 100%;
     width: 100%;
     object-fit: cover;
     transition: all .5s;
@@ -399,7 +418,13 @@ header {
     color: white;
     margin-bottom: 0;
 }
+.centre-position{
+    object-position: center;
+}
 
+.top-position{
+    object-position: top;
+}
 .wickam-st-img {
     background-image: url(images/wickham-st-front.png);
     background-position: bottom;
@@ -415,18 +440,9 @@ header {
     background-position: center;
 }
 
-.logan-rd-img {
-    background-image: url(images/logan-rd-front-.jpg);
-    background-position: center;
-}
 
 .logan-rd-bed-img {
     background-image: url(images/logan-rd-bed.jpg);
-    background-position: center;
-}
-
-.napier-st-img {
-    background-image: url(images/napier-st-kitchen.jpg);
     background-position: center;
 }
 
