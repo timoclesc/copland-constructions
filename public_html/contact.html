@@ -49,8 +49,31 @@
 
     <main>
         <div class="info main-grid">
-            <div class="template-grid"><img alt="The Henrick's bathroom - artist rendering" class="main-image"
-                    src="images/logan-rd-front-.jpg" />
+            <div class="template-grid">
+                <picture>
+					<source 
+						type="image/webp" 
+						sizes="min-width(800px) calc(800px/3),
+							100vw"
+						srcset="
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w200.jpg.webp 200w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w400.jpg.webp 400w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w600.jpg.webp 600w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w800.jpg.webp 800w,
+						images\projects\raw\greenslopes-logan-rd-apartment-front-streetview.jpg.webp 1620w" >
+					<source 
+						sizes="min-width(800px) calc(800px/3),
+							100vw"
+						srcset="
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w200.jpg 200w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w400.jpg 400w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w600.jpg 600w,
+						images\projects\resized\greenslopes-logan-rd-apartment-front-streetview-w800.jpg 800w,
+						images\projects\raw\greenslopes-logan-rd-apartment-front-streetview.jpg 1620w" >
+                    <img class="main-image" 
+                        src="images\projects\resized\greenslopes-logan-rd-apartment-front-streetview.jpg" 
+                        alt="A street view of one of Copland Constructions largeset projects">
+				  </picture>
                 <div class="template-head">
                     <h2 class="template-title">Contact</h2>
 

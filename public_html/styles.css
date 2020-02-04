@@ -288,7 +288,11 @@ header {
     .template-content {
         grid-column: 2 / -1;
     }
- 
+    
+    .template-head {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
 }
 
 
@@ -384,6 +388,7 @@ header {
 
 .project-preview-img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: all .5s;
 }
@@ -425,43 +430,25 @@ header {
 .top-position{
     object-position: top;
 }
-.wickam-st-img {
-    background-image: url(images/wickham-st-front.png);
-    background-position: bottom;
-}
-
-.wickam-st-inprog-img {
-    background-image: url(images/wickham-st-inprogress.PNG);
-    background-position: bottom;
-}
-
-.logan-rd-living-img {
-    background-image: url(images/logan-rd-living-.jpg);
-    background-position: center;
-}
-
-
-.logan-rd-bed-img {
-    background-image: url(images/logan-rd-bed.jpg);
-    background-position: center;
-}
-
-.logan-rd-living-img {
-    height: 300px;
-    background-image: url(images/290617_Hendrick_Cut-Throught_Colour-Review.jpg);
-    background-position: bottom;
-    background-size: cover;
-}
 
 
 /* =================
 =   Project Page   =
 ====================*/
 
+.project-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+    background-color: #7a7a7a;
+    opacity: 0.9;
+}
 .project-label h3,
 .project-label a {
     color: white;
     text-decoration: none;
+    margin-bottom: 0;
 }
 
 .double {
