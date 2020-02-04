@@ -1,7 +1,6 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH=/home/jqomjmcvmxtm/public_html-test/
- - /bin/cp -R public_html/images $DEPLOYPATH/images
- - /bin/cp public_html $DEPLOYPATH
+ - export DEPLOYPATH=/home/jqomjmcvmxtm/public_html/
+ - /bin/cp -R public_html/. $DEPLOYPATH
   
