@@ -431,6 +431,70 @@ header {
     object-position: top;
 }
 
+.card--project {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__text {
+    padding-top: 1rem;
+}
+
+.card__stat {
+    margin-bottom: 0;
+}
+
+.btn--gallery {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.card__img .mklbItem {
+    display: block;
+}
+
+.card__img .mklbItem:not(:first-child) {
+    display: none;
+}
+
+.btn--gallery:hover .project-preview-img {
+    opacity: 0.7;
+}
+
+.btn--text {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: unset;
+    bottom: 0;
+}
+
+@media (min-width: 800px) {
+    .card--project {
+        flex-direction: row;
+    }
+
+    .card__img {
+        width: 40%;
+        flex: 0 0 40%;
+    }
+
+    .card__text {
+        padding-top: 0;
+        margin-left: 3em;
+    }
+    
+}
 
 /* =================
 =   Project Page   =
@@ -533,4 +597,11 @@ header {
     .contact-table { 
         margin-left: 7em;
     }
+}
+
+
+/* Helpers */
+
+.m-b {
+    margin-bottom: 5em;
 }
